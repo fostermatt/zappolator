@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9702D711C68618D006A79C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9702D701C68618D006A79C6 /* AppDelegate.swift */; };
+		C9702D731C68618D006A79C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9702D721C68618D006A79C6 /* ViewController.swift */; };
+		C9702D761C68618D006A79C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9702D741C68618D006A79C6 /* Main.storyboard */; };
+		C9702D781C68618D006A79C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9702D771C68618D006A79C6 /* Assets.xcassets */; };
+		C9702D7B1C68618D006A79C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9702D791C68618D006A79C6 /* LaunchScreen.storyboard */; };
+		C9702D861C68618D006A79C6 /* zappolatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9702D851C68618D006A79C6 /* zappolatorTests.swift */; };
+		C9702D911C68618D006A79C6 /* zappolatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9702D901C68618D006A79C6 /* zappolatorUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9702D821C68618D006A79C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9702D651C68618D006A79C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9702D6C1C68618D006A79C6;
+			remoteInfo = zappolator;
+		};
+		C9702D8D1C68618D006A79C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9702D651C68618D006A79C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9702D6C1C68618D006A79C6;
+			remoteInfo = zappolator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9702D6D1C68618D006A79C6 /* zappolator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zappolator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9702D701C68618D006A79C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9702D721C68618D006A79C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C9702D751C68618D006A79C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9702D771C68618D006A79C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9702D7A1C68618D006A79C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9702D7C1C68618D006A79C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9702D811C68618D006A79C6 /* zappolatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zappolatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9702D851C68618D006A79C6 /* zappolatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zappolatorTests.swift; sourceTree = "<group>"; };
+		C9702D871C68618D006A79C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9702D8C1C68618D006A79C6 /* zappolatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zappolatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9702D901C68618D006A79C6 /* zappolatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zappolatorUITests.swift; sourceTree = "<group>"; };
+		C9702D921C68618D006A79C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9702D6A1C68618D006A79C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9702D7E1C68618D006A79C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9702D891C68618D006A79C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9702D641C68618D006A79C6 = {
+			isa = PBXGroup;
+			children = (
+				C9702D6F1C68618D006A79C6 /* zappolator */,
+				C9702D841C68618D006A79C6 /* zappolatorTests */,
+				C9702D8F1C68618D006A79C6 /* zappolatorUITests */,
+				C9702D6E1C68618D006A79C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9702D6E1C68618D006A79C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9702D6D1C68618D006A79C6 /* zappolator.app */,
+				C9702D811C68618D006A79C6 /* zappolatorTests.xctest */,
+				C9702D8C1C68618D006A79C6 /* zappolatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9702D6F1C68618D006A79C6 /* zappolator */ = {
+			isa = PBXGroup;
+			children = (
+				C9702D701C68618D006A79C6 /* AppDelegate.swift */,
+				C9702D721C68618D006A79C6 /* ViewController.swift */,
+				C9702D741C68618D006A79C6 /* Main.storyboard */,
+				C9702D771C68618D006A79C6 /* Assets.xcassets */,
+				C9702D791C68618D006A79C6 /* LaunchScreen.storyboard */,
+				C9702D7C1C68618D006A79C6 /* Info.plist */,
+			);
+			path = zappolator;
+			sourceTree = "<group>";
+		};
+		C9702D841C68618D006A79C6 /* zappolatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9702D851C68618D006A79C6 /* zappolatorTests.swift */,
+				C9702D871C68618D006A79C6 /* Info.plist */,
+			);
+			path = zappolatorTests;
+			sourceTree = "<group>";
+		};
+		C9702D8F1C68618D006A79C6 /* zappolatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9702D901C68618D006A79C6 /* zappolatorUITests.swift */,
+				C9702D921C68618D006A79C6 /* Info.plist */,
+			);
+			path = zappolatorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9702D6C1C68618D006A79C6 /* zappolator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9702D951C68618D006A79C6 /* Build configuration list for PBXNativeTarget "zappolator" */;
+			buildPhases = (
+				C9702D691C68618D006A79C6 /* Sources */,
+				C9702D6A1C68618D006A79C6 /* Frameworks */,
+				C9702D6B1C68618D006A79C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = zappolator;
+			productName = zappolator;
+			productReference = C9702D6D1C68618D006A79C6 /* zappolator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9702D801C68618D006A79C6 /* zappolatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9702D981C68618D006A79C6 /* Build configuration list for PBXNativeTarget "zappolatorTests" */;
+			buildPhases = (
+				C9702D7D1C68618D006A79C6 /* Sources */,
+				C9702D7E1C68618D006A79C6 /* Frameworks */,
+				C9702D7F1C68618D006A79C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9702D831C68618D006A79C6 /* PBXTargetDependency */,
+			);
+			name = zappolatorTests;
+			productName = zappolatorTests;
+			productReference = C9702D811C68618D006A79C6 /* zappolatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9702D8B1C68618D006A79C6 /* zappolatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9702D9B1C68618D006A79C6 /* Build configuration list for PBXNativeTarget "zappolatorUITests" */;
+			buildPhases = (
+				C9702D881C68618D006A79C6 /* Sources */,
+				C9702D891C68618D006A79C6 /* Frameworks */,
+				C9702D8A1C68618D006A79C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9702D8E1C68618D006A79C6 /* PBXTargetDependency */,
+			);
+			name = zappolatorUITests;
+			productName = zappolatorUITests;
+			productReference = C9702D8C1C68618D006A79C6 /* zappolatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9702D651C68618D006A79C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Matt Foster";
+				TargetAttributes = {
+					C9702D6C1C68618D006A79C6 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					C9702D801C68618D006A79C6 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = C9702D6C1C68618D006A79C6;
+					};
+					C9702D8B1C68618D006A79C6 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = C9702D6C1C68618D006A79C6;
+					};
+				};
+			};
+			buildConfigurationList = C9702D681C68618D006A79C6 /* Build configuration list for PBXProject "zappolator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9702D641C68618D006A79C6;
+			productRefGroup = C9702D6E1C68618D006A79C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9702D6C1C68618D006A79C6 /* zappolator */,
+				C9702D801C68618D006A79C6 /* zappolatorTests */,
+				C9702D8B1C68618D006A79C6 /* zappolatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9702D6B1C68618D006A79C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9702D7B1C68618D006A79C6 /* LaunchScreen.storyboard in Resources */,
+				C9702D781C68618D006A79C6 /* Assets.xcassets in Resources */,
+				C9702D761C68618D006A79C6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9702D7F1C68618D006A79C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9702D8A1C68618D006A79C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9702D691C68618D006A79C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9702D731C68618D006A79C6 /* ViewController.swift in Sources */,
+				C9702D711C68618D006A79C6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9702D7D1C68618D006A79C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9702D861C68618D006A79C6 /* zappolatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9702D881C68618D006A79C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9702D911C68618D006A79C6 /* zappolatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9702D831C68618D006A79C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9702D6C1C68618D006A79C6 /* zappolator */;
+			targetProxy = C9702D821C68618D006A79C6 /* PBXContainerItemProxy */;
+		};
+		C9702D8E1C68618D006A79C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9702D6C1C68618D006A79C6 /* zappolator */;
+			targetProxy = C9702D8D1C68618D006A79C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9702D741C68618D006A79C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9702D751C68618D006A79C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9702D791C68618D006A79C6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9702D7A1C68618D006A79C6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9702D931C68618D006A79C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9702D941C68618D006A79C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9702D961C68618D006A79C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = zappolator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FM.zappolator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C9702D971C68618D006A79C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = zappolator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FM.zappolator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C9702D991C68618D006A79C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = zappolatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FM.zappolatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zappolator.app/zappolator";
+			};
+			name = Debug;
+		};
+		C9702D9A1C68618D006A79C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = zappolatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FM.zappolatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zappolator.app/zappolator";
+			};
+			name = Release;
+		};
+		C9702D9C1C68618D006A79C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = zappolatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FM.zappolatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = zappolator;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C9702D9D1C68618D006A79C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = zappolatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FM.zappolatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = zappolator;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9702D681C68618D006A79C6 /* Build configuration list for PBXProject "zappolator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9702D931C68618D006A79C6 /* Debug */,
+				C9702D941C68618D006A79C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9702D951C68618D006A79C6 /* Build configuration list for PBXNativeTarget "zappolator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9702D961C68618D006A79C6 /* Debug */,
+				C9702D971C68618D006A79C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9702D981C68618D006A79C6 /* Build configuration list for PBXNativeTarget "zappolatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9702D991C68618D006A79C6 /* Debug */,
+				C9702D9A1C68618D006A79C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9702D9B1C68618D006A79C6 /* Build configuration list for PBXNativeTarget "zappolatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9702D9C1C68618D006A79C6 /* Debug */,
+				C9702D9D1C68618D006A79C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9702D651C68618D006A79C6 /* Project object */;
+}
