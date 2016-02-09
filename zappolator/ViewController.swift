@@ -11,39 +11,45 @@ import UIKit
 
 class ViewController: UIViewController {
 	
-	var labelString:String = "0"
-	var currentMode:Character = "0"
+	
+	// inputOp: 0=none, +=add, -=sub, *=mul, /=div
 	var inputOp:Int = 0
-	// currentMode: 0=none, +=add, -=sub, *=mul, /=div
+	
+	// Display string
+	var labelString:String = "0"
+	// first input
+	var savedNum:Float32 = 0.0
+	// current/second input
 	var labelNum:Float32 = 0.0
-	var savedNum:Float32 = 0
+	var decimalEntered:Bool = false
 	var lastButtonWasMode:Bool = false
 	
-	func pressedNumber(num:Float32){
-		if(lastButtonWasMode){
-			lastButtonWasMode = false
-			labelNum = num
-		}
-		if labelNum == 0 {
-			labelNum = num		}
-		else {
-			let newNum:Float32 = labelNum * 10
-			labelNum = newNum + num
-			labelString = labelNum.description
-		}
+	func pressedNumber(num:String){
+		labelString = labelString.stringByAppendingString(num)
 		updateDisplay()
 	}
 	
+	
 	func updateDisplay(){
-		labelString = labelNum.description
-		if inputOp == 0 {
-			savedNum = labelNum
+		print(labelString)
+		guard let labelFloat:Float32 = Float32(labelString) else {
+			displayLabel.text = "Conversion Failed"
+			return
 		}
-		displayLabel.text = labelNum.description
+		labelNum = labelFloat
+		if floor(labelFloat) == labelFloat {
+			guard let labelInt:Int = Int(labelString) else {
+				displayLabel.text = "Int Conversion Failed"
+				return
+			}
+			labelString = "\(labelInt)"
+		}
+		else {displayLabel.text = labelFloat.description}
+		displayLabel.text = labelString
 	}
 	
 	func changeMode(newMode:Int){
-		if savedNum == 0 {
+		if savedNum == 0.0 {
 			return
 		}
 		print(newMode)
@@ -76,56 +82,49 @@ class ViewController: UIViewController {
 		clearDisplay()
 	}
 	
-	@IBAction func pressedClear(sender: AnyObject) {
-		clearDisplay()
-	}
+	@IBAction func pressedClear(sender: AnyObject) {clearDisplay()}
 	
 	@IBAction func pressedNegate(sender: AnyObject) {
 	}
-	
-	@IBAction func pressed0(sender: AnyObject) {pressedNumber(0)}
-	
-	@IBAction func pressed1(sender: AnyObject) {pressedNumber(1)}
-	
-	@IBAction func pressed2(sender: AnyObject) {pressedNumber(2)}
-	
-	@IBAction func pressed3(sender: AnyObject) {pressedNumber(3)}
-	
-	@IBAction func pressed4(sender: AnyObject) {pressedNumber(4)}
-	
-	@IBAction func pressed5(sender: AnyObject) {pressedNumber(5)}
-	
-	@IBAction func pressed6(sender: AnyObject) {pressedNumber(6)}
-	
-	@IBAction func pressed7(sender: AnyObject) {pressedNumber(7)}
-	
-	@IBAction func pressed8(sender: AnyObject) {pressedNumber(8)}
-	
-	@IBAction func pressed9(sender: AnyObject) {pressedNumber(9)}
 	
 	@IBAction func pressedPercent(sender: AnyObject) {
 	}
 	
 	@IBAction func pressedDecimal(sender: AnyObject) {
+		
 	}
 	
-	@IBAction func pressedDivide(sender: AnyObject) {
-		changeMode(4)
-	}
+	@IBAction func pressed0(sender: AnyObject) {pressedNumber("0")}
 	
-	@IBAction func pressedMultiply(sender: AnyObject) {
-		changeMode(3)
-	}
+	@IBAction func pressed1(sender: AnyObject) {pressedNumber("1")}
 	
-	@IBAction func pressedAdd(sender: AnyObject) {
-		changeMode(1)
-	}
+	@IBAction func pressed2(sender: AnyObject) {pressedNumber("2")}
 	
-	@IBAction func pressedSubtract(sender: AnyObject) {
-		changeMode(2)
-	}
+	@IBAction func pressed3(sender: AnyObject) {pressedNumber("3")}
+	
+	@IBAction func pressed4(sender: AnyObject) {pressedNumber("4")}
+	
+	@IBAction func pressed5(sender: AnyObject) {pressedNumber("5")}
+	
+	@IBAction func pressed6(sender: AnyObject) {pressedNumber("6")}
+	
+	@IBAction func pressed7(sender: AnyObject) {pressedNumber("7")}
+	
+	@IBAction func pressed8(sender: AnyObject) {pressedNumber("8")}
+	
+	@IBAction func pressed9(sender: AnyObject) {pressedNumber("9")}
+	
+	@IBAction func pressedAdd(sender: AnyObject) {changeMode(1)}
+	
+	@IBAction func pressedSubtract(sender: AnyObject) {changeMode(2)}
+	
+	@IBAction func pressedMultiply(sender: AnyObject) {changeMode(3)}
+	
+	@IBAction func pressedDivide(sender: AnyObject) {changeMode(4)}
 	
 	@IBAction func pressedEqual(sender: AnyObject) {
+		// put current numer in float var
+		
 		print(savedNum)
 		print(labelNum)
 		print(inputOp)
