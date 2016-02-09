@@ -8,31 +8,53 @@
 
 import UIKit
 
-enum modes {
-	case NONE
-	case ADDITION
-	case SUBTRACTION
-	case MULTIPLICATION
-	case DIVISION
-}
 
 class ViewController: UIViewController {
 	
 	var labelString:String = "0"
-	var currentMode:modes = modes.NONE
-	var savedNum:Int = 0
+	var currentMode:Character = "0"
+	var inputOp:Int = 0
+	// currentMode: 0=none, +=add, -=sub, *=mul, /=div
+	var labelNum:Float32 = 0.0
+	var savedNum:Float32 = 0
 	var lastButtonWasMode:Bool = false
 	
-	func pressedNumber(num:Int){
-		
+	func pressedNumber(num:Float32){
+		if(lastButtonWasMode){
+			lastButtonWasMode = false
+			labelNum = num
+		}
+		if labelNum == 0 {
+			labelNum = num		}
+		else {
+			let newNum:Float32 = labelNum * 10
+			labelNum = newNum + num
+			labelString = labelNum.description
+		}
+		updateDisplay()
 	}
 	
 	func updateDisplay(){
-		
+		labelString = labelNum.description
+		if inputOp == 0 {
+			savedNum = labelNum
+		}
+		displayLabel.text = labelNum.description
 	}
 	
-	func changeMode(newMode:modes){
-		
+	func changeMode(newMode:Int){
+		if savedNum == 0 {
+			return
+		}
+		print(newMode)
+		inputOp = newMode
+		lastButtonWasMode = true
+	}
+	
+	func clearDisplay(){
+		labelString = "0"
+		labelNum = 0
+		updateDisplay()
 	}
 
 	override func viewDidLoad() {
@@ -48,9 +70,14 @@ class ViewController: UIViewController {
 	@IBOutlet weak var displayLabel: UILabel!
 	
 	@IBAction func pressedAllClear(sender: AnyObject) {
+		savedNum = 0
+		inputOp = 0
+		lastButtonWasMode = false
+		clearDisplay()
 	}
 	
 	@IBAction func pressedClear(sender: AnyObject) {
+		clearDisplay()
 	}
 	
 	@IBAction func pressedNegate(sender: AnyObject) {
@@ -83,18 +110,53 @@ class ViewController: UIViewController {
 	}
 	
 	@IBAction func pressedDivide(sender: AnyObject) {
+		changeMode(4)
 	}
 	
 	@IBAction func pressedMultiply(sender: AnyObject) {
+		changeMode(3)
 	}
 	
 	@IBAction func pressedAdd(sender: AnyObject) {
+		changeMode(1)
 	}
 	
 	@IBAction func pressedSubtract(sender: AnyObject) {
+		changeMode(2)
 	}
 	
 	@IBAction func pressedEqual(sender: AnyObject) {
+		print(savedNum)
+		print(labelNum)
+		print(inputOp)
+		if inputOp == 0 || lastButtonWasMode {
+			return
+		}
+		if inputOp == 1 {
+			print("\(savedNum + labelNum)")
+			savedNum = savedNum + labelNum
+		}
+		else if inputOp == 2 {
+			savedNum = savedNum - labelNum
+		}
+		else if inputOp == 3 {
+			savedNum = savedNum * labelNum
+		}
+		else if inputOp == 4 {
+			if savedNum == 0 {
+				displayLabel.text = "Undefined"
+				return
+			} else if labelNum == 0 {
+				displayLabel.text = "Inf"
+				return
+			}
+			savedNum = savedNum / labelNum
+		}
+		inputOp = 0
+		labelNum = savedNum
+		labelString = savedNum.description
+		updateDisplay()
+		lastButtonWasMode = true
 	}
 
 
