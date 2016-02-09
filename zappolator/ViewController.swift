@@ -25,27 +25,12 @@ class ViewController: UIViewController {
 	var lastButtonWasMode:Bool = false
 	
 	func pressedNumber(num:String){
-		labelString = labelString.stringByAppendingString(num)
-		updateDisplay()
+		
 	}
 	
 	
 	func updateDisplay(){
-		print(labelString)
-		guard let labelFloat:Float32 = Float32(labelString) else {
-			displayLabel.text = "Conversion Failed"
-			return
-		}
-		labelNum = labelFloat
-		if floor(labelFloat) == labelFloat {
-			guard let labelInt:Int = Int(labelString) else {
-				displayLabel.text = "Int Conversion Failed"
-				return
-			}
-			labelString = "\(labelInt)"
-		}
-		else {displayLabel.text = labelFloat.description}
-		displayLabel.text = labelString
+		
 	}
 	
 	func changeMode(newMode:Int){
@@ -123,39 +108,7 @@ class ViewController: UIViewController {
 	@IBAction func pressedDivide(sender: AnyObject) {changeMode(4)}
 	
 	@IBAction func pressedEqual(sender: AnyObject) {
-		// put current numer in float var
 		
-		print(savedNum)
-		print(labelNum)
-		print(inputOp)
-		if inputOp == 0 || lastButtonWasMode {
-			return
-		}
-		if inputOp == 1 {
-			print("\(savedNum + labelNum)")
-			savedNum = savedNum + labelNum
-		}
-		else if inputOp == 2 {
-			savedNum = savedNum - labelNum
-		}
-		else if inputOp == 3 {
-			savedNum = savedNum * labelNum
-		}
-		else if inputOp == 4 {
-			if savedNum == 0 {
-				displayLabel.text = "Undefined"
-				return
-			} else if labelNum == 0 {
-				displayLabel.text = "Inf"
-				return
-			}
-			savedNum = savedNum / labelNum
-		}
-		inputOp = 0
-		labelNum = savedNum
-		labelString = savedNum.description
-		updateDisplay()
-		lastButtonWasMode = true
 	}
 
 
