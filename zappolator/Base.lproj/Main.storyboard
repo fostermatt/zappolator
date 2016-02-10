@@ -188,7 +188,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAM-ir-87o">
                                 <rect key="frame" x="160" y="478" width="160" height="90"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="JTB-Yt-8i2"/>
                                 </constraints>
@@ -243,6 +243,7 @@
                             <constraint firstItem="udf-yX-iJz" firstAttribute="width" secondItem="6C1-8F-JQO" secondAttribute="width" id="9Rf-23-g2d"/>
                             <constraint firstItem="Aiq-ye-d02" firstAttribute="height" secondItem="6C1-8F-JQO" secondAttribute="height" id="9en-qd-2Ev"/>
                             <constraint firstItem="A8Z-6s-MLs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ATu-tE-4rI"/>
+                            <constraint firstItem="nAM-ir-87o" firstAttribute="width" secondItem="md4-TB-oAR" secondAttribute="width" id="AWh-Hs-3gZ"/>
                             <constraint firstItem="otJ-Fo-eiG" firstAttribute="width" secondItem="6C1-8F-JQO" secondAttribute="width" id="Cv8-ib-zl8"/>
                             <constraint firstItem="A8Z-6s-MLs" firstAttribute="height" secondItem="6C1-8F-JQO" secondAttribute="height" id="DL8-bI-MWi"/>
                             <constraint firstItem="ufv-sW-qxw" firstAttribute="height" secondItem="6C1-8F-JQO" secondAttribute="height" id="EHq-NL-q3q"/>
