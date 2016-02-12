@@ -7,9 +7,11 @@
 //
 
 import UIKit
-
+import SafariServices
 
 class ViewController: UIViewController {
+	
+	private var urlString:String = "http://m.wolframalpha.com"
 	
 	var isFirstDigit = true
 	// inputOp: ==none, +=add, -=sub, ×=mul, /=div
@@ -33,6 +35,7 @@ class ViewController: UIViewController {
 		displayVal = 0
 		inputOp = "="
 		isFirstDigit = true
+		urlString = "http://m.wolframalpha.com"
 	}
 	
 	@IBOutlet weak var displayLabel: UILabel!
@@ -65,7 +68,6 @@ class ViewController: UIViewController {
 	@IBAction func pressedOperand(sender: UIButton) {
 		buttonBorders(sender)
 		inputOp = sender.currentTitle!
-		print(displayVal)
 		savedNum = displayVal
 		isFirstDigit = true
 	}
@@ -76,14 +78,21 @@ class ViewController: UIViewController {
 //		print(displayVal)
 //		print(sender.currentTitle!)
 		buttonBorders(sender)
+		let stringDisplayVal:String = displayVal.description
 		if inputOp == "+"{
 			displayVal = savedNum + displayVal
+			urlString += "/input/?i=" + savedNum.description + "+%2B+" + stringDisplayVal + "&x=0&y=0"
+			print(urlString)
 		}
 		else if inputOp == "-"{
 			displayVal = savedNum - displayVal
+			urlString += "/input/?i=" + savedNum.description + "+-+" + stringDisplayVal + "&x=0&y=0"
+			print(urlString)
 		}
 		else if inputOp == "×"{
 			displayVal = savedNum * displayVal
+			urlString += "/input/?i=" + savedNum.description + "+*+" + stringDisplayVal + "&x=0&y=0"
+			print(urlString)
 		}
 		else if inputOp == "÷"{
 			if displayVal == 0{
@@ -96,6 +105,8 @@ class ViewController: UIViewController {
 //			}
 			else {
 				displayVal = savedNum / displayVal
+				urlString += "/input/?i=" + savedNum.description + "+/+" + stringDisplayVal + "&x=0&y=0"
+				print(urlString)
 			}
 		}
 		
@@ -119,11 +130,18 @@ class ViewController: UIViewController {
 	@IBOutlet weak var equalButton: UIButton!
 	@IBOutlet weak var divButton: UIButton!
 	@IBOutlet weak var multButton: UIButton!
+	@IBOutlet weak var waButton: UIButton!
 	
 	@IBAction func touchButton(sender: AnyObject) {
 		sender.layer.borderColor = UIColor.grayColor().CGColor
 	}
 	
+	@IBAction func waSafariview(sender: AnyObject) {
+		buttonBorders(sender)
+		let svc = SFSafariViewController(URL: NSURL(string:self.urlString)!)
+		self.presentViewController(svc, animated: true, completion: nil)
+		urlString = "http://m.wolframalpha.com"
+	}
 
 	@IBAction func buttonBorders(sender: AnyObject){
 		sender.layer.borderColor = UIColor.blackColor().CGColor
@@ -152,6 +170,7 @@ class ViewController: UIViewController {
 		buttonBorders(equalButton)
 		buttonBorders(divButton)
 		buttonBorders(multButton)
+		buttonBorders(waButton)
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 	
