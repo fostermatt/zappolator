@@ -133,7 +133,8 @@ class ViewController: UIViewController {
 	@IBOutlet weak var waButton: UIButton!
 	
 	@IBAction func touchButton(sender: AnyObject) {
-		sender.layer.borderColor = UIColor.grayColor().CGColor
+//		sender.layer.borderColor = UIColor.grayColor().CGColor
+		sender.layer.borderWidth = 2
 	}
 	
 	@IBAction func waSafariview(sender: AnyObject) {
