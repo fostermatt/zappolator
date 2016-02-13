@@ -11,7 +11,13 @@ import SafariServices
 
 class ViewController: UIViewController {
 	
-	private var urlString:String = "http://m.wolframalpha.com"
+	
+	var baseURL:String = "http://m.wolframalpha.com"
+	var queryString:String = "/input/?i="
+	var urlString:String = ""
+	var eqString:String = ""
+	
+	
 	
 	var isFirstDigit = true
 	// inputOp: ==none, +=add, -=sub, ×=mul, /=div
@@ -19,6 +25,8 @@ class ViewController: UIViewController {
 	// first input
 	var savedNum:Double = 0.0
 	// current/second input
+	
+	
 	var displayVal:Double {
 		get{
 			return NSNumberFormatter().numberFromString(displayLabel.text!)!.doubleValue
@@ -35,13 +43,18 @@ class ViewController: UIViewController {
 		displayVal = 0
 		inputOp = "="
 		isFirstDigit = true
-		urlString = "http://m.wolframalpha.com"
+		urlString = baseURL
+		eqString = ""
 	}
 	
 	@IBOutlet weak var displayLabel: UILabel!
 	
 	@IBAction func pressedNumber(sender: UIButton){
 		buttonBorders(sender)
+		if inputOp == "=" {
+			urlString = baseURL
+			eqString = ""
+		}
 		let myNum = sender.currentTitle!
 		displayLabel.text = isFirstDigit ? myNum : displayLabel.text! + myNum
 		isFirstDigit = false
@@ -61,8 +74,13 @@ class ViewController: UIViewController {
 	}
 	
 	@IBAction func pressedNegate(sender: AnyObject) {
+		print(inputOp)
+		let fuckIt:String = inputOp
 		buttonBorders(sender)
 		displayVal = displayVal * -1
+		print(inputOp)
+		inputOp = fuckIt
+		isFirstDigit = false
 	}
 	
 	@IBAction func pressedOperand(sender: UIButton) {
@@ -78,47 +96,49 @@ class ViewController: UIViewController {
 	}
 	
 	@IBAction func pressedEqual(sender: AnyObject) {
-//		print(savedNum)
-//		print(inputOp)
-//		print(displayVal)
-//		print(sender.currentTitle!)
 		buttonBorders(sender)
+		
 		let stringDisplayVal:String = displayVal.description
-		if urlString == "http://m.wolframalpha.com" {
-			urlString += "/input/?i=" + savedNum.description
+		if urlString == "http://m.wolframalpha.com" && inputOp != "=" {
+			print("inputOp = \(inputOp)")
+			urlString += "/input/?i="
+			if eqString == "" {
+				eqString += "%28" + savedNum.description
+			}
+			urlString += "%28" + eqString
+			
 		}
+		print("I'm in the calculate function!")
 		if inputOp == "+"{
 			displayVal = savedNum + displayVal
-			urlString += "+%2B+" + stringDisplayVal
-			print(urlString)
+			urlString += "+%2B+" + stringDisplayVal + "%29"
 		}
 		else if inputOp == "-"{
 			displayVal = savedNum - displayVal
-			urlString += "+-+" + stringDisplayVal
-			print(urlString)
+			urlString += "+-+" + stringDisplayVal + "%29"
 		}
 		else if inputOp == "×"{
 			displayVal = savedNum * displayVal
-			urlString += "+*+" + stringDisplayVal
-			print(urlString)
+			urlString += "+*+" + stringDisplayVal + "%29"
 		}
 		else if inputOp == "÷"{
+			print("I'm dividing!")
 			if displayVal == 0{
 				allClear()
 				displayLabel.text = "Error"
-				urlString = "http://m.wolframalpha.com"
+				urlString = baseURL
 			}
-//			else if savedNum == 0{
-//				allClear()
-//				displayLabel.text = "∞"
-//			}
 			else {
+				print("\(savedNum) / \(displayVal)")
 				displayVal = savedNum / displayVal
-				urlString += "+/+" + stringDisplayVal
-				print(urlString)
+				urlString += "+/+" + stringDisplayVal + "%29"
 			}
 		}
-		
+		else {
+			print("you suck at life")
+		}
+		print(urlString)
+		eqString = ""
 	}
 	
 	@IBOutlet weak var acButton: UIButton!
@@ -153,7 +173,9 @@ class ViewController: UIViewController {
 		}
 		let svc = SFSafariViewController(URL: NSURL(string:self.urlString)!)
 		self.presentViewController(svc, animated: true, completion: nil)
-		urlString = "http://m.wolframalpha.com"
+		urlString = baseURL
+		eqString = ""
+		allClear()
 	}
 
 	@IBAction func buttonBorders(sender: AnyObject){
@@ -165,6 +187,7 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		urlString = baseURL
 		buttonBorders(acButton)
 		buttonBorders(cButton)
 		buttonBorders(negButton)
