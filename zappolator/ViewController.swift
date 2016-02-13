@@ -66,7 +66,12 @@ class ViewController: UIViewController {
 	}
 	
 	@IBAction func pressedOperand(sender: UIButton) {
-		buttonBorders(sender)
+		if inputOp != "=" {
+			pressedEqual(sender)
+		}
+		else {
+			buttonBorders(sender)
+		}
 		inputOp = sender.currentTitle!
 		savedNum = displayVal
 		isFirstDigit = true
@@ -79,25 +84,29 @@ class ViewController: UIViewController {
 //		print(sender.currentTitle!)
 		buttonBorders(sender)
 		let stringDisplayVal:String = displayVal.description
+		if urlString == "http://m.wolframalpha.com" {
+			urlString += "/input/?i=" + savedNum.description
+		}
 		if inputOp == "+"{
 			displayVal = savedNum + displayVal
-			urlString += "/input/?i=" + savedNum.description + "+%2B+" + stringDisplayVal + "&x=0&y=0"
+			urlString += "+%2B+" + stringDisplayVal
 			print(urlString)
 		}
 		else if inputOp == "-"{
 			displayVal = savedNum - displayVal
-			urlString += "/input/?i=" + savedNum.description + "+-+" + stringDisplayVal + "&x=0&y=0"
+			urlString += "+-+" + stringDisplayVal
 			print(urlString)
 		}
 		else if inputOp == "×"{
 			displayVal = savedNum * displayVal
-			urlString += "/input/?i=" + savedNum.description + "+*+" + stringDisplayVal + "&x=0&y=0"
+			urlString += "+*+" + stringDisplayVal
 			print(urlString)
 		}
 		else if inputOp == "÷"{
 			if displayVal == 0{
 				allClear()
 				displayLabel.text = "Error"
+				urlString = "http://m.wolframalpha.com"
 			}
 //			else if savedNum == 0{
 //				allClear()
@@ -105,7 +114,7 @@ class ViewController: UIViewController {
 //			}
 			else {
 				displayVal = savedNum / displayVal
-				urlString += "/input/?i=" + savedNum.description + "+/+" + stringDisplayVal + "&x=0&y=0"
+				urlString += "+/+" + stringDisplayVal
 				print(urlString)
 			}
 		}
@@ -139,6 +148,9 @@ class ViewController: UIViewController {
 	
 	@IBAction func waSafariview(sender: AnyObject) {
 		buttonBorders(sender)
+		if urlString != "http://m.wolframalpha.com" {
+			urlString += "&x=0&y=0"
+		}
 		let svc = SFSafariViewController(URL: NSURL(string:self.urlString)!)
 		self.presentViewController(svc, animated: true, completion: nil)
 		urlString = "http://m.wolframalpha.com"

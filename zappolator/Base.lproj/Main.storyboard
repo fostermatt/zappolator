@@ -234,8 +234,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hg-lw-rxw">
                                 <rect key="frame" x="0.0" y="478" width="160" height="90"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma4-48-dXE">
-                                        <rect key="frame" x="-14" y="0.0" width="108" height="90"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma4-48-dXE">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
                                         <state key="normal" image="WA">
                                             <color key="titleColor" red="0.90600854158401489" green="0.039136379957199097" blue="0.038142364472150803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
