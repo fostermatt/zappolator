@@ -99,46 +99,41 @@ class ViewController: UIViewController {
 		buttonBorders(sender)
 		
 		let stringDisplayVal:String = displayVal.description
-		if urlString == "http://m.wolframalpha.com" && inputOp != "=" {
-			print("inputOp = \(inputOp)")
-			urlString += "/input/?i="
-			if eqString == "" {
-				eqString += "%28" + savedNum.description
-			}
-			urlString += "%28" + eqString
-			
+//		if urlString == "http://m.wolframalpha.com" && inputOp != "=" {
+//			urlString += "/input/?i="
+		if eqString == "" {
+			eqString += "%28" + savedNum.description
 		}
-		print("I'm in the calculate function!")
+		else {
+			eqString = "%28" + eqString
+		}
+//		}
 		if inputOp == "+"{
 			displayVal = savedNum + displayVal
-			urlString += "+%2B+" + stringDisplayVal + "%29"
+			eqString += "+%2B+" + stringDisplayVal + "%29"
 		}
 		else if inputOp == "-"{
 			displayVal = savedNum - displayVal
-			urlString += "+-+" + stringDisplayVal + "%29"
+			eqString += "+-+" + stringDisplayVal + "%29"
 		}
 		else if inputOp == "×"{
 			displayVal = savedNum * displayVal
-			urlString += "+*+" + stringDisplayVal + "%29"
+			eqString += "+*+" + stringDisplayVal + "%29"
 		}
 		else if inputOp == "÷"{
-			print("I'm dividing!")
 			if displayVal == 0{
 				allClear()
 				displayLabel.text = "Error"
 				urlString = baseURL
 			}
 			else {
-				print("\(savedNum) / \(displayVal)")
 				displayVal = savedNum / displayVal
-				urlString += "+/+" + stringDisplayVal + "%29"
+				eqString += "+/+" + stringDisplayVal + "%29"
 			}
 		}
-		else {
-			print("you suck at life")
-		}
+		urlString = baseURL + queryString + eqString
 		print(urlString)
-		eqString = ""
+		
 	}
 	
 	@IBOutlet weak var acButton: UIButton!
